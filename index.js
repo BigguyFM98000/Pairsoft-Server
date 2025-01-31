@@ -26,6 +26,10 @@ mongoose.connect(process.env.MONGO_URI, {
     console.log(err.message);
 });
 
+app.get('/', (req, res) => {
+    res.json({message: "Welcome to my Pairsoft Server" });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
